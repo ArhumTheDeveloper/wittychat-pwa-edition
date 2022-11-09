@@ -112,3 +112,4 @@ app.post("/attachimg", function (req, res) {
     }
   );
 });
+server.listen(3000)
