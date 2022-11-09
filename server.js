@@ -5,9 +5,9 @@ var server  = app.listen(3000);
 var io      = require('socket.io').listen(server);
 const fs = require("fs");
 const fileUpload = require("express-fileupload");
-// const io = require("socket.io")(server, {
-//   allowEIO3: true, // false by default
-// });
+ const io = require("socket.io")(server, {
+   allowEIO3: true, // false by default
+ });
 app.use(express.static(path.join(__dirname, "")));
 var userConnections = [];
 io.on("connection", (socket) => {
